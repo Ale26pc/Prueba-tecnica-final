@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>Asignacion de Artículos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-auto" href="#">
+            <img src="https://www.cuc.edu.co/wp-content/uploads/2024/03/logo_cuc.png" width="130" height="40" class="d-inline-block align-top" alt="">
+        </a>
+        <button id="logout-btn" class="btn btn-danger mr-auto">Logout</button>
+    </nav>
+</header>
+  <div class="container">
+    <h1 class="mt-4 mb-4">Asignación de Artículos</h1>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h2 class="card-title">Asignar Artículo</h2>
+        <div class="form-group">
+          <label for="articuloId">ID del Artículo:</label>
+          <input type="number" id="articuloId" name="articuloId" class="form-control">
+          <small id="oficinaIdHelp" class="form-text text-muted">Escribe el id del articulo que deseas asignar, (El id puedes revisarlo en la vista de la tabla anterior).</small>
+        </div>
+        <div class="form-group">
+          <label for="oficinaId">ID de la Oficina:</label>
+          <input type="number" id="oficinaId" name="oficinaId" class="form-control">
+          <small id="oficinaIdHelp" class="form-text text-muted">Escribe el id de la oficina a la que deseas asignar un articulo (Tienes 9 oficinas disponibles).</small>
+      </div>
+      <div class="form-group">
+      <label for="bloque">Bloque:</label>
+      <input type="text" id="bloque" name="bloque" class="form-control" readonly>
+    </div>
+    <div class="form-group">
+      <label for="numeroOficina">Número de Oficina:</label>
+      <input type="text" id="numeroOficina" name="numeroOficina" class="form-control"readonly>
+    </div>
+        <button id="asignarBtn" class="btn btn-primary">Asignar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Retirar Artículo</h2>
+        <div class="form-group">
+          <label for="retirarArticuloId">ID del Artículo:</label>
+          <input type="number" id="retirarArticuloId" name="retirarArticuloId" class="form-control">
+        </div>
+        
+        <button id="retirarBtn" class="btn btn-primary">Retirar</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="gestion.js"></script>
+  <script src="logout.js"></script>
+  <footer>
+    <p>&copy; 2024 Derechos Reservados - Alexandra Peña</p>
+</footer>
+</body>
+</html>

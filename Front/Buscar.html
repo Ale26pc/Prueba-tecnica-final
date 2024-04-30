@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Dispositivos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-auto" href="#">
+            <img src="https://www.cuc.edu.co/wp-content/uploads/2024/03/logo_cuc.png" width="130" height="40" class="d-inline-block align-top" alt="">
+        </a>
+        <button id="logout-btn" class="btn btn-danger mr-auto">Logout</button>
+    </nav>
+</header>
+<body>
+    <div class="container">
+        <h1>Listado de cantidad de dispositivos por bloque</h1>
+        <table id="tableBloques" class="table table-bordered">
+            <thead >
+                <tr>
+                    <th>Bloque</th>
+                    <th>Cantidad de Dispositivos</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h1>Listado de cantidad de dispositivos por oficina</h1>
+        <table id="tableOficinas" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Oficina ID</th>
+                    <th>Bloque</th>
+                    <th>Número de Oficina</th>
+                    <th>Cantidad de Dispositivos</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h1>Listado de artículos sin asignar a una oficina</h1>
+        <table id="tableArticulos" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Artículo ID</th>
+                    <th>Serial</th>
+                    <th>Tipo</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="reportes.js"></script>
+</body>
+</html>
