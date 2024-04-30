@@ -1,20 +1,20 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import mysql from 'mysql';
-import cors from 'cors'; // Importa el middleware cors
+import cors from 'cors'; 
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware para permitir CORS
 app.use(cors());
 
 // Crear una conexión a la base de datos MySQL
 const con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1001893103",
-  database: "basedatos"
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASS || "1001893103",
+  database: process.env.DB_NAME || "basedatos"
 });
 
 con.connect(function(err) {
